@@ -1,0 +1,17 @@
+rect{
+	fill: rgb(222, 32, 32);
+	stroke: #653D3D;
+	stroke-width: 0.5;
+}
+.axis path,
+  .axis line {
+    fill: none;
+    stroke: white;
+    shape-rendering: crispEdges;
+}
+/*svg{
+	preserveAspectRatio: "xMinYMin meet";
+	viewBox: "0 0 600 400";
+}*/
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script type=text/javascript>
+    $(document).ready(function() {
+        
+       
+        // Create the menu Items and Event Listeners
+        CreateMenu();
+        
+    });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="distributiondiv" class="header">
+            <button id="menu-distribution" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i> 
+            </button> <b>Select Distribution</b>
+            <ul id="distributionSelector" class="mdl-menu mdl-js-menu" for="menu-distribution">
+                <li class="mdl-menu__item" id="gaussian">Gaussian</li>
+                <li class="mdl-menu__item" id="beta">Beta</li>
+                <li class="mdl-menu__item" id="exponential">Exponential</li>
+            </ul>
+        </div>
+        <hr/>
+        <div id="sliderdiv">
+       
+        </div>
+    </div>
+</body>
+
+</html>
