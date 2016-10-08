@@ -312,8 +312,8 @@ function CreateMenu() {
             aSlider.setAttribute("name", "a");
             aSlider.setAttribute("id", "slider2");
             aSlider.setAttribute("min", "1");
-            aSlider.setAttribute("max", "5");
-            aSlider.setAttribute("step", "0.05");
+            aSlider.setAttribute("max", "50");
+            aSlider.setAttribute("step", "1");
 
 
             var bSlider = document.createElement("input");
@@ -322,8 +322,8 @@ function CreateMenu() {
             bSlider.setAttribute("id", "slider1");
             bSlider.setAttribute("name", "b");
             bSlider.setAttribute("min", "1");
-            bSlider.setAttribute("max", "5");
-            bSlider.setAttribute("step", "0.05");
+            bSlider.setAttribute("max", "50");
+            bSlider.setAttribute("step", "1");
 
 
             var betaTextP = document.createElement("p");

@@ -1,21 +1,67 @@
 <h1>Beta Distribution</h1>
 <h2>Overview</h2>
 <p>
-    Used to describe a prior belief with two outcomes. P(theta|a, b) where theta is Two Parameters:
+    The beta distribution provides an probability distribution of a probability of an event with 2 possible outcomes. I'll use estimating if a coin is fair as an example. (If you are tired of the old coin flip examples for everything in statistics please check out this <a href="http://varianceexplained.org/statistics/beta_distribution_and_baseball/">batting average example by David Robinson)</a> 
+
+    To illustrate the coin flip example, try out the following:
     <ul>
-        <li>beta: number of outcome #1</li>
-        <li>alpha: number of outcome #2</li>
+        <li>Start at a = 1 and b = 1. Think of this as 1 head (<i>a</i>) and 1 tails(<i>b</i>). We can see at this point the probability of the coin being fair, x = 0.5, is equivalent to the probability of x = 0.1 or 0.9 or any other value. The beta distribution is effectively telling us we don't have enough information to get a good estimate of the 'fairness' of the coin.
+        </li>
+        <li>Increase the number of heads (<i>a</i>) to 10 and leave <i>b</i> set to 1. Note that the probability of the coin being fair is very low, but the probability of the coin being biased towards heads (x > 0.5) is much higher. </li>
+        <li>Slide the <i>Beta</i> parameter to a value of 10 (10 heads 10 tails).  In this case the distribution is centered over the value of x = 0.5. This would lead us to believe the the coin is reasonably fair based on the evidence provided. </li>
+        <li>Set <i>alpha</i> and <i>beta</i> parameters to 20.  This would signify 20 heads and 20 tails which would be fairly strong evidence that the coin is fair.  Note that the distribution is considerably narrower with more evidence present</li>
+    </ul>
+    Go through the coin flip example and explain the scenarios of what happens when you move something.... Coin flip, if my prior evidence tells me that I had 1 heads, and 50 tails, then chances are my coin is most likely not fair ie I have a low probability of the coin being fair (or low probability of a theta == 0.5...) The beta distribution is used to describe a prior belief with two possible outcomes. Think probability distribution of a probabilities. For example, I want to determine the probability of a coin being fair. P(theta|a, b) where theta is 
+<h2>Parameters</h2>
+    <ul>
+        <li>beta: number of outcome #1
+            <ul>
+                <li># of coin flips with heads as an outcome</li>
+            </ul>
+        </li>
+        <li>alpha: number of outcome #2
+            <ul>
+                <li># of coin flips with tails as an outcome</li>
+            </ul>
+        </li>
         <li>Both are shape parameters</li>
     </ul>
 </p>
-<h2>Examples</h2>
+<h2>Applications and Examples</h2>
 <p>
     <ul>
         <li>coin flip : Use this for your base example and cite Bayesian Book</li>
-        <li>batting average : http://varianceexplained.org/statistics/beta_distribution_and_baseball/ </li>
+        <li><a href="http://varianceexplained.org/statistics/beta_distribution_and_baseball/">Batting Average</a> </li>
     </ul>
 </p>
 <h2>Interesting Properties</h2>
 <p>
-    When a == b , mode and mean = 0.5 spread of data is related to concentration, k, k = a + b * Narrows as k increases mean = a/(a+b) mode = (a-1)/(a+b-2) conjugate prior for bernoulli
+    <ul>
+        <li> When a == b
+            <ul>
+                <li> mode = 0.5 </li>
+                <li> mean = 0.5 </li>
+            </ul>
+        </li>
+        <li> spread of data is related to concentration, <i>k</i>
+            <ul>
+                <li>k = a + b</li>
+                <li>Distribution shape narrows as <i>k</i> increases
+                    <ul>
+                        <li>This makes sense because if we have more data we can estimate theta more precisely.</li>
+                    </ul>
+                </li>
+            </ul>
+            <!--  k = a + b * Narrows as k increases mean = a/(a+b) mode = (a-1)/(a+b-2) conjugate prior for bernoulli -->
+        </li>
+        <li>Conjugate prior for Bernoulli distribution ADD LINK TO DEFINITION OF CONJUGATE PRIOR OR ELSE PROVIDE ONE HERE</li>
+    </ul>
+</p>
+<h2>References</h2>
+<p>
+    <ul>
+        <li><a href="http://varianceexplained.org/statistics/beta_distribution_and_baseball/">Variance Explained (Blog)</a></li>
+        <li><a href="https://sites.google.com/site/doingbayesiandataanalysis/what-s-new-in-2nd-ed">Doing Bayesian Data Analysis by John Kruschke (Book)</a></li>
+    </ul>
+    In the interactive plots above
 </p>
